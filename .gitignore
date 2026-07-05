@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Data
+data/
+
+# Virtual environment
+venv/
+.idea/
+
+# Outputs
+outputs/plots/
