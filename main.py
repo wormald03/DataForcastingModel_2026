@@ -1,16 +1,11 @@
-# This is a sample Python script.
+from src.data_loader import load_data
+from src.features import engineer_features
+from src.model import train_model
+from src.evaluate import evaluate_model
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+df = load_data("data/DailyDelhiClimateTrain.csv")
+df = engineer_features(df, target_col="meantemp")
+model, X_test, y_test = train_model(df, target_col="meantemp")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# 4. Evaluate
+evaluate_model(model, X_test, y_test)
