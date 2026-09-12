@@ -2,7 +2,7 @@
 
 A machine learning project that forecasts daily temperatures using a Random Forest Regressor, built in Python with a clean modular pipeline and an interactive Streamlit web app.
 
-**[Try the live demo here](http://192.168.0.33:8501)**
+**[Try the live demo here](https://dataforcastingmodel2026-ewormald.streamlit.app/)**
 
 ---
 
